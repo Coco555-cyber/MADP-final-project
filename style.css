@@ -21,6 +21,20 @@
     padding: 0;
 }
 
+html {
+    width: 100%;
+    max-width: 100%;
+    overflow-x: hidden;
+    scrollbar-gutter: stable;
+}
+
+body {
+    margin: 0 auto;
+    position: relative;
+    left: 0;
+    max-width: 100%;
+}
+
 #navbar {
     position: fixed;
     top: 0;
@@ -113,7 +127,7 @@
 }
 
 .dropdown .fa {
-    transition: transform 0.2s ease-in-out;
+    transition: transform 0.1s ease-in-out;
 }
 
 .dropdown:hover .fa {
@@ -127,7 +141,8 @@
     opacity: 0;
     width: 10rem;
     visibility: hidden;
-    background: rgba(255, 255, 255, 0.7);
+    background: white;
+    backdrop-filter: blur(0.5rem);
     list-style: none;
     border-radius: 0 0 0.5rem 0.5rem;
     box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
@@ -140,30 +155,29 @@
     cursor: pointer;
     padding: 1rem;
     transition: all 0.1s ease-in-out;
-    color: rgb(100, 100, 100);
+    color: rgb(150, 150, 150);
 }
 
 .dropdown-menu li:hover {
     color: black;
-    background: rgba(255, 255, 255, 0.5);
 }
 
 #main {
-    margin: auto;
     display: flex;
-    justify-content: center;
+    flex-direction: column;
+    gap: 1.5rem;    
 }
 
 #landing {
     position: relative;
-    width: 100vw;
+    width: 100%;
     height: 100vh;
     overflow: hidden;
 }
 
 #slider {
     position: relative;
-    width: 100vw;
+    width: 100%;
     height: 100vh;
     overflow: hidden;
 }
@@ -337,7 +351,7 @@
 
 #slide2-text h1 {
     font-family: "Geoform-ExtraBold";
-    font-size: 11rem;
+    font-size: 10rem;
 }
 
 #slide2-tag {
@@ -352,7 +366,7 @@
     font-weight: 100;
 }
 
-#freezinator {
+#vortex {
     position: absolute;
     max-width: 100vw;
     max-height: 80vh;
@@ -371,4 +385,154 @@
     bottom: -100vh;
     left: 50%;
     transform: translateX(-50%);
+}
+
+#slide3-text {
+    position: absolute;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-end;
+    text-align: right;
+    height: 100%;
+    max-width: 80vw;
+    padding: 0 6rem;
+    right: 0;
+    background: linear-gradient(to left, black, transparent);
+    z-index: 100;
+}
+
+#slide3-text h1 {
+    font-family: "Geoform-ExtraBold";
+    font-size: 10rem;
+}
+
+#slide3-text h2 {
+    font-family: "Outfit", sans-serif;
+    font-weight: 100;
+}
+
+#large-logo {
+    position: absolute;
+    max-width: 100vw;
+    max-height: 90vh;
+    bottom: 0;
+    left: 9vw;
+    z-index: 50;
+}
+
+#circle3 {
+    position: absolute;
+    width: 170vh;
+    height: 170vh;
+    max-width: 100vw;
+    max-height: 100vw;
+    bottom: -75vh;
+    transform: translateX(-30vh);
+}
+
+#testimonials {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    gap: 3rem;
+    height: fit-content;
+}
+
+.test {
+    display: flex;
+    width: 100%;
+    height: fit-content;
+}
+
+.test-text-container {
+    flex: 1;
+    width: 50%;
+    padding: 2%;
+}
+
+.test-text {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    gap: 2rem;
+    height: 100%;
+    margin: 0 2rem;
+    padding: 1rem;
+    border-radius: 2rem;
+    line-height: 2rem;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.3);
+}
+
+.test-text h1 {
+    margin-bottom: 2rem;
+}
+
+.test-text p {
+    font-weight: 200;
+}
+
+.check {
+    border: 2px solid black;
+    color: black;
+    padding: 0.5rem;
+    border-radius: 1rem;
+    text-decoration: none;
+    background: transparent;
+    width: fit-content;
+    transition: all 0.2s ease-in-out;
+}
+
+.check:hover {
+    background: black;
+    color: white;
+}
+
+.product {
+    flex: 2;
+    width: 50%;
+    height: auto;
+    background: radial-gradient(at center 120%, white 0%, black 60%);
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.3);
+    aspect-ratio: auto;
+}
+
+.left-img {
+    border-radius: 0 2rem 2rem 0;
+}
+
+.right-img {
+    border-radius: 2rem 0 0 2rem;
+}
+
+footer {
+    margin-top: 1.5rem;
+    background: black;
+    padding: 1rem 15vw;
+}
+
+footer h2 {
+    color: #00c3ff;
+    text-decoration: underline;
+    font-weight: 300;
+}
+
+footer p {
+    color: white;
+    font-weight: 200;
+    line-height: 2rem;
+}
+
+.link {
+    color: #00c3ff;
+    box-shadow: inset 0 0 0 0 #42a4b3;
+    transition: all 0.2s ease-in-out;
+}
+  
+.link:hover {
+    color: white;
+    box-shadow: inset 300px 0 0 0 #42a4b3;
 }

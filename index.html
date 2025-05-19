@@ -2,89 +2,140 @@
 <html>
 
 <head>
-    <meta charset="UTF-8" />
-    <title>Polar Platter</title>
-    <link rel="icon" type="image/png" href="assets/images/polarplatterR.png">
+  <meta charset="UTF-8" />
+  <title>Polar Platter</title>
+  <link rel="icon" type="image/png" href="assets/images/polarplatterR.png">
 
-    <!-- Styles & Scripts -->
-    <link rel="stylesheet" href="style.css" />
-    <script src="main.js"></script>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+  <!-- Styles & Scripts -->
+  <link rel="stylesheet" href="style.css" />
+  <script src="main.js"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
 
 
-    <!-- Fonts -->
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&display=swap" rel="stylesheet" />
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&display=swap" rel="stylesheet" />
 </head>
 
 <body>
-    <!-- Navbar -->
-    <nav id="navbar">
-        <div id="logo-container">
-            <a href="#" class="logo">POLAR PLATTER</a>
-        </div>
-        <ul id="nav-links">
-            <li class="nav-obj dropdown">
-                <a href="#">Products <i class="fa fa-angle-down"></i></a>
-                <ul class="dropdown-menu">
-                    <li><a href="#">Cryo-Cutlery</a></li>
-                    <li><a href="#">Glacial-Vortex</a></li>
-                </ul>
-            </li>
-            <li class="nav-obj"><a href="#">Projections</a></li>
-            <li class="nav-obj"><a href="#">Contact</a></li>
-            <li class="nav-obj"><a href="#">About</a></li>
-        </ul>
-    </nav>
-
-    <!-- Main content -->
-    <div id="main">
-        <section id="landing">
-            <div id="slider">
-                <button id="prev" class="arrow">&#10094;</button>
-                <button id="next" class="arrow">&#10095;</button>
-                <div id="slides">
-                    <div id="slide1" class="slide">
-                        <div id="slide1-text">
-                            <h1>CRYO-<br>CUTLERY</h1>
-                            <h2>
-                                The world's first
-                                <strong class="cold">coolant-cooled</strong> cutlery.
-                            </h2>
-                            <a href="#" class="learn">Learn More</a>
-                        </div>
-
-                        <img id="action" src="assets/images/utensils_action.png">
-                        <img id="circle1" src="assets/images/circle.png">
-                    </div>
-                    <div id="slide2" class="slide">
-                        <div id="slide2-text">
-                            <h1>GLACIAL-VORTEX</h1>
-                            <div id="slide2-tag">
-                                <h2>
-                                    Taste 
-                                    <strong class="cold">absolute zero</strong>.
-                                </h2>
-                                <a href="#" class="learn">Learn More</a>
-                            </div>
-                        </div>
-                        <img id="freezinator" src="assets/images/glacial_vortex.png">
-                        <img id="circle2" src="assets/images/circle.png">
-                    </div>
-                    <div id="slide3" class="slide">
-                    </div>
-                </div>
-            </div>
-
-            <div id="scroll-bar">
-                <div class="scroll-section" data-index="0"></div>
-                <div class="scroll-section" data-index="1"></div>
-                <div class="scroll-section" data-index="2"></div>
-                <div id="highlight"></div>
-            </div>
-        </section>
+  <!-- Navbar -->
+  <nav id="navbar">
+    <div id="logo-container">
+      <a href="#" class="logo">POLAR PLATTER</a>
     </div>
+    <ul id="nav-links">
+      <li class="nav-obj dropdown">
+        <a>Products <i class="fa fa-angle-down"></i></a>
+        <ul class="dropdown-menu">
+          <li><a href="pages/cutlery/cutlery.html">Cryo-Cutlery</a></li>
+          <li><a href="pages/vortex/vortex.html">Glacial-Vortex</a></li>
+        </ul>
+      </li>
+      <li class="nav-obj"><a href="#">Projections</a></li>
+      <li class="nav-obj"><a href="#">Contact</a></li>
+      <li class="nav-obj"><a href="#">About</a></li>
+    </ul>
+  </nav>
+
+  <!-- Main content -->
+  <div id="main">
+    <section id="landing">
+      <div id="slider">
+        <button id="prev" class="arrow">&#10094;</button>
+        <button id="next" class="arrow">&#10095;</button>
+        <div id="slides">
+          <div id="slide1" class="slide">
+            <div id="slide1-text">
+              <h1>CRYO-<br>CUTLERY</h1>
+              <h2>
+                The world's first
+                <strong class="cold">coolant-cooled</strong> cutlery.
+              </h2>
+              <a href="pages/cutlery/cutlery.html" class="learn">Learn More</a>
+            </div>
+
+            <img id="action" src="assets/images/utensils_action.png">
+            <img id="circle1" src="assets/images/circle.png">
+          </div>
+          <div id="slide2" class="slide">
+            <div id="slide2-text">
+              <h1>GLACIAL-VORTEX</h1>
+              <div id="slide2-tag">
+                <h2>
+                  Taste the bite of
+                  <strong class="cold">absolute zero</strong>.
+                </h2>
+                <a href="pages/vortex/vortex.html" class="learn">Learn More</a>
+              </div>
+            </div>
+            <img id="vortex" src="assets/images/glacial_vortex.png">
+            <img id="circle2" src="assets/images/circle.png">
+          </div>
+          <div id="slide3" class="slide">
+            <div id="slide3-text">
+              <h1>MORE COMING SOON</h1>
+              <h2>
+                We're cooking up a blizzard for you!
+              </h2>
+            </div>
+            <img id="large-logo" src="assets/images/polarplatterR.png">
+            <img id="circle3" src="assets/images/circle.png">
+          </div>
+        </div>
+      </div>
+
+      <div id="scroll-bar">
+        <div class="scroll-section" data-index="0"></div>
+        <div class="scroll-section" data-index="1"></div>
+        <div class="scroll-section" data-index="2"></div>
+        <div id="highlight"></div>
+      </div>
+    </section>
+
+    <section id="testimonials">
+      <div class="test">
+        <img class="product left-img" src="assets/images/utensils_pose.png">
+        <div class="test-text-container">
+          <div class="test-text">
+            <h2>My Utensils Have Redefined Thermodynamics!</h2>
+            <p>
+              "I used to suffer through lukewarm bites of ice cream, but Cryo-Cutlery™ has changed my life! Now, my spoon is colder than the ice cream itself, sometimes colder than physics allows. Last week, my sorbet sublimated instantly upon contact. Science may not have been ready for this, but I sure am!"<br>— Dr. Sam T., Casual Dessert Physicist
+            </p>
+            <a href="pages/cutlery/cutlery.html" class="check">
+              Check it out! &#8614;
+            </a>
+          </div>
+        </div>
+      </div>
+
+      <div class="test">
+        <div class="test-text-container">
+          <div class="test-text">
+            <h2>The Last Cooling System You'll Ever Need</h2>
+            <p>
+              I plugged my Cryo-Cutlery™ into the Glacial-Vortex™ expecting a nice chill. Instead, my utensils became frozen artifacts. My knife slices like a thermal anomaly, my fork crackles with ice, and my spoon? My sorbet never stood a chance. This isn’t just cooling—it’s a total heat takeover.<br>— Kevin L., Amateur Cryogenics Enthusiast
+            </p>
+            <a href="pages/vortex/vortex.html" class="check">
+              Check it out! &#8614;
+            </a>
+          </div>
+        </div>
+        <img class="product right-img" src="assets/images/glacial_vortex_pose.png">
+      </div>
+    </section>
+  </div>
+
+  <footer>
+    <h2>Credits</h2>
+    <p>
+      Created by Alex Wang.<br>
+      Models and renders created in <a class="link" href="https://blender.org/" target="_blank">Blender</a>.<br>
+      Logos created in <a class="link" href="https://inkscape.org/" target="_blank">InkScape</a>.<br>
+      Testimonials provided by <a class="link" href="https://copilot.microsoft.com/" target="_blank">Microsoft Copilot</a>
+    </p>
+    <hr>
+  </footer>
 </body>
 
 </html>

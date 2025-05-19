@@ -1,0 +1,210 @@
+@font-face {
+    font-family: "Geoform";
+    src: url("../../assets/fonts/Geoform.otf");
+}
+
+@font-face {
+    font-family: "Geoform-Bold";
+    src: url("../../assets/fonts/Geoform-Bold.otf");
+    font-weight: bold;
+}
+
+@font-face {
+    font-family: "Geoform-ExtraBold";
+    src: url("../../assets/fonts/Geoform-ExtraBold.otf");
+}
+
+* {
+    box-sizing: border-box;
+    font-family: "Outfit", sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+html {
+    width: 100%;
+    max-width: 100%;
+    overflow-x: hidden;
+    scrollbar-gutter: stable;
+}
+
+body {
+    margin: 0 auto;
+    position: relative;
+    left: 0;
+    max-width: 100%;
+}
+
+#navbar {
+    position: fixed;
+    top: 0;
+    width: calc(100% - 3rem);
+    height: 4rem;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    padding: 0 2rem;
+    margin: 1.5rem;
+    background: rgba(255, 255, 255, 0.85);
+    backdrop-filter: blur(0.5rem);
+    border-radius: 0.75rem;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+    z-index: 2000;
+}
+
+#logo-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    height: 100%;
+    margin-right: auto;
+    margin-left: 4rem;
+}
+
+#logo-container::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: white;
+    transform: skewX(-20deg) translateX(-8.5%);
+    padding: 0 2rem;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+    z-index: -1;
+}
+
+.logo {
+    font-family: "Geoform-ExtraBold";
+    font-size: 2.5rem;
+    text-decoration: none;
+    background-image: linear-gradient(45deg, #94D3F8FF 0%, #F6D6FFFF 100%);
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    user-select: none;
+    transform: translateY(3px);
+    transition: opacity 0.1s ease-in-out;
+}
+
+.logo:hover {
+    opacity: 0.75;
+}
+
+#nav-links {
+    display: flex;
+    list-style: none;
+    height: 100%;
+    align-items: center;
+}
+
+.nav-obj {
+    display: flex;
+    align-items: center;
+    height: 100%;
+    color: rgb(150, 150, 150);
+    font-size: 1rem;
+    width: 100%;
+    padding: 0 1.5rem;
+    transition: all 0.1s ease-in-out;
+    white-space: nowrap;
+}
+
+#nav-links li a {
+    color: inherit;
+    text-decoration: none;
+}
+
+.nav-obj:hover {
+    color: rgb(50, 50, 50);
+    background: white;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+.dropdown {
+    position: relative;
+}
+
+.dropdown .fa {
+    transition: transform 0.1s ease-in-out;
+}
+
+.dropdown:hover .fa {
+    transform: rotate(-180deg);
+}
+
+.dropdown-menu {
+    position: absolute;
+    top: 100%;
+    right: 0;
+    opacity: 0;
+    width: 10rem;
+    visibility: hidden;
+    background: white;
+    backdrop-filter: blur(0.5rem);
+    list-style: none;
+    border-radius: 0 0 0.5rem 0.5rem;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+    z-index: 2001;
+    overflow: hidden;
+    transition: all 0.1s ease-in-out;
+}
+
+.dropdown-menu li {
+    cursor: pointer;
+    padding: 1rem;
+    transition: all 0.1s ease-in-out;
+    color: rgb(150, 150, 150);
+}
+
+.dropdown-menu li:hover {
+    color: black;
+}
+
+#main {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;    
+}
+
+#product-display {
+    display: flex;
+    height: 100vh;
+    background: linear-gradient(to bottom, #94D3F8FF, transparent 25%);
+}
+
+.cold {
+    font-size: 2rem;
+    color: #94D3F8FF;
+    text-shadow: 0 0 1rem rgba(255, 255, 255, 0.8);
+}
+
+footer {
+    margin-top: 1.5rem;
+    background: black;
+    padding: 1rem 15vw;
+}
+
+footer h2 {
+    color: #00c3ff;
+    text-decoration: underline;
+    font-weight: 300;
+}
+
+footer p {
+    color: white;
+    font-weight: 200;
+    line-height: 2rem;
+}
+
+.link {
+    color: #00c3ff;
+    box-shadow: inset 0 0 0 0 #42a4b3;
+    transition: all 0.2s ease-in-out;
+}
+  
+.link:hover {
+    color: white;
+    box-shadow: inset 300px 0 0 0 #42a4b3;
+}
