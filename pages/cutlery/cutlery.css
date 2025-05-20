@@ -45,10 +45,11 @@ body {
     justify-content: flex-end;
     padding: 0 2rem;
     margin: 1.5rem;
-    background: rgba(255, 255, 255, 0.85);
+    background: rgba(255, 255, 255, 0.8);
     backdrop-filter: blur(0.5rem);
     border-radius: 0.75rem;
-    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2),
+                inset 0px 0px 20px white;
     z-index: 2000;
 }
 
@@ -70,7 +71,7 @@ body {
     width: 100%;
     height: 100%;
     background: white;
-    transform: skewX(-20deg) translateX(-8.5%);
+    transform: skewX(-20deg) translateX(-7%);
     padding: 0 2rem;
     box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
     z-index: -1;
@@ -78,7 +79,7 @@ body {
 
 .logo {
     font-family: "Geoform-ExtraBold";
-    font-size: 2.5rem;
+    font-size: 3rem;
     text-decoration: none;
     background-image: linear-gradient(45deg, #94D3F8FF 0%, #F6D6FFFF 100%);
     background-clip: text;
@@ -140,6 +141,7 @@ body {
     right: 0;
     opacity: 0;
     width: 10rem;
+    height: auto;
     visibility: hidden;
     background: white;
     backdrop-filter: blur(0.5rem);
@@ -152,9 +154,11 @@ body {
 }
 
 .dropdown-menu li {
+    display: flex;
     cursor: pointer;
-    padding: 1rem;
     transition: all 0.1s ease-in-out;
+    width: 100%;
+    height: 100%;
     color: rgb(150, 150, 150);
 }
 
@@ -162,10 +166,15 @@ body {
     color: black;
 }
 
+.dropdown-menu li a {
+    padding: 1rem;
+    width: 100%;
+    height: 100%;
+}
+
 #main {
     display: flex;
     flex-direction: column;
-    gap: 1.5rem;    
 }
 
 #product-display {
@@ -181,7 +190,6 @@ body {
 }
 
 footer {
-    margin-top: 1.5rem;
     background: black;
     padding: 1rem 15vw;
 }

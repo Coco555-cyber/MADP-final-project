@@ -4,8 +4,8 @@ document.addEventListener("DOMContentLoaded", () => {
     const scrollSections = document.querySelectorAll(".scroll-section");
     const highlight = document.getElementById("highlight");
     const totalSlides = slideElements.length;
-    const transitionTime = 7000;
-    const manualTime = 3000;
+    const transitionTime = 10000;
+    const manualTime = 5000;
     let currentIndex = 1;
     let userPaused = false;
     let slideTimer = setInterval(nextSlide, transitionTime);
@@ -136,4 +136,24 @@ document.addEventListener("DOMContentLoaded", () => {
         dropdownMenu.style.opacity = "0";
         dropdownMenu.style.visibility = "hidden"
     });
+
+    const progressBar = document.getElementById("progress");
+
+    window.addEventListener("scroll", () => {
+        let scrollTop = document.documentElement.scrollTop || document.body.scrollTop;
+        let maxScroll = document.documentElement.scrollHeight - window.innerHeight;
+        let scrollPercentage = (scrollTop / maxScroll) * 100;
+
+        progressBar.style.width = scrollPercentage + "%";
+    });
+
+    const gradientOverlay = document.getElementById("gradient-overlay");
+    let gradientAngle = 0;
+
+    function rotateGradient() {
+        gradientAngle = (gradientAngle + 1) % 360;
+        gradientOverlay.style.background = `linear-gradient(${gradientAngle}deg, #94D3F8FF, #F6D6FFFF)`;
+    }
+
+    setInterval(rotateGradient, 50);
 });
