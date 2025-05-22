@@ -1,0 +1,145 @@
+@font-face {
+    font-family: "Geoform";
+    src: url("../assets/fonts/Geoform.otf");
+}
+
+@font-face {
+    font-family: "Geoform-Bold";
+    src: url("../assets/fonts/Geoform-Bold.otf");
+    font-weight: bold;
+}
+
+@font-face {
+    font-family: "Geoform-ExtraBold";
+    src: url("../assets/fonts/Geoform-ExtraBold.otf");
+}
+
+* {
+    box-sizing: border-box;
+    font-family: "Outfit", sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+html {
+    width: 100%;
+    max-width: 100%;
+    overflow-x: hidden;
+    scrollbar-gutter: stable;
+}
+
+body {
+    margin: 0 auto;
+    position: relative;
+    left: 0;
+    max-width: 100%;
+}
+
+#main {
+    display: flex;
+    flex-direction: column;
+}
+
+#contact-container {
+    display: flex;
+    height: 100vh;
+    position: relative;
+    overflow: hidden;
+}
+
+#contact-container::before {
+    position: absolute;
+    left: -10vw;
+    top: -50vh;
+    opacity: 1;
+    width: 120vw;
+    height: 90vh;
+    content: "";
+    background: linear-gradient(45deg, #94D3F8FF, #F6D6FFFF);
+    background-size: 200% 200%;
+    box-shadow: inset 0px 0px 10px rgba(0, 0, 0, 0.2);
+    animation: pulse 10s infinite alternate;
+    border-radius: 0 0 50% 50%;
+    z-index: -1;
+}
+
+@keyframes pulse {
+    0% {
+        background-position: 0% 50%;
+    }
+
+    100% {
+        background-position: 100% 50%;
+    }
+}
+
+#contact-text {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#contact-text h1 {
+    margin-top: 12vh;
+    font-size: 18vh;
+    color: white;
+}
+
+form {
+    width: 30vw;
+    margin: auto;
+    padding: 1rem;
+    background: rgb(245, 245, 245);
+    border-radius: 1rem;
+}
+
+label {
+    display: block;
+    margin-top: 10px;
+}
+
+input,
+textarea {
+    width: 100%;
+    padding: 8px;
+    margin-top: 5px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+textarea {
+    height: 15vh;
+}
+
+button {
+    margin-top: 15px;
+    padding: 10px;
+    background: #007bff;
+    color: white;
+    border: none;
+    border-radius: 1rem;
+    cursor: pointer;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.25rem;
+}
+
+.shake {
+    font-size: 1.5rem;
+}
+
+button:hover .shake {
+    animation: shake-rotate 0.3s ease-in-out;
+}
+
+@keyframes shake-rotate {
+    0% { transform: rotate(0deg); }
+    25% { transform: rotate(-10deg); }
+    50% { transform: rotate(10deg); }
+    75% { transform: rotate(-10deg); }
+    100% { transform: rotate(0deg); }
+}

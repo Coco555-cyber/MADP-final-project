@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="UTF-8" />
+  <title>Polar Platter</title>
+  <link rel="icon" type="image/png" href="../../assets/images/polarplatterIcon.png">
+
+  <!-- Styles & Scripts -->
+  <link rel="stylesheet" href="./contact.css" />
+  <link rel="stylesheet" href="../../generic/navbar.css" />
+  <link rel="stylesheet" href="../../generic/footer.css" />
+  <script src="../../generic/dropdown.js"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&display=swap" rel="stylesheet" />
+</head>
+
+<body>
+  <!-- Navbar -->
+  <nav id="navbar">
+    <div id="logo-container">
+      <a href="../../index.html" class="logo">POLAR PLATTER</a>
+    </div>
+    <ul id="nav-links">
+      <li class="nav-obj dropdown">
+        <a>Products <i class="fa fa-angle-down"></i></a>
+        <ul class="dropdown-menu">
+          <li><a href="../../products/cutlery/cutlery.html">Cryo-Cutlery</a></li>
+          <li><a href="../../products/vortex/vortex.html">Glacial-Vortex</a></li>
+        </ul>
+      </li>
+      <li class="nav-obj"><a href="#">Contact</a></li>
+      <li class="nav-obj"><a href="../about/about.html">About</a></li>
+    </ul>
+  </nav>
+
+  <!-- Main content -->
+  <div id="main">
+    <section id="contact-container">
+        <div id="contact-text">
+            <h1>Contact Us!</h1>
+            <form>
+                <label for="name">Name:</label>
+                <input type="text" id="name" name="name" required>
+              
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" required>
+              
+                <label for="message">Message:</label>
+                <textarea id="message" name="message" required></textarea>
+              
+                <button type="submit">Send<div class="shake">&nbsp;&#9993;</div></button>
+              </form>              
+        </div>
+    </section>
+  </div>
+
+  <footer>
+    <h2>Credits</h2>
+    <p>
+      Created by Alex Wang. |
+      Models and renders created in <a class="link" href="https://blender.org/" target="_blank">Blender</a>. |
+      Logos created in <a class="link" href="https://inkscape.org/" target="_blank">InkScape</a>. |
+      Filler text provided by <a class="link" href="https://copilot.microsoft.com/" target="_blank">Microsoft
+        Copilot</a>
+    </p>
+  </footer>
+</body>
+
+</html>
