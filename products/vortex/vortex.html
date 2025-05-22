@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="UTF-8" />
+  <title>Polar Platter</title>
+  <link rel="icon" type="image/png" href="../../assets/images/polarplatterIcon.png">
+
+  <!-- Styles & Scripts -->
+  <link rel="stylesheet" href="../products.css" />
+  <script src="../products.js"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+
+
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&display=swap" rel="stylesheet" />
+</head>
+
+<body>
+  <!-- Navbar -->
+  <nav id="navbar">
+    <div id="logo-container">
+      <a href="../../index.html" class="logo">POLAR PLATTER</a>
+    </div>
+    <ul id="nav-links">
+      <li class="nav-obj dropdown">
+        <a>Products <i class="fa fa-angle-down"></i></a>
+        <ul class="dropdown-menu">
+          <li><a href="../cutlery/cutlery.html">Cryo-Cutlery</a></li>
+          <li><a href="#">Glacial-Vortex</a></li>
+        </ul>
+      </li>
+      <li class="nav-obj"><a href="#">Contact</a></li>
+      <li class="nav-obj"><a href="#">About</a></li>
+    </ul>
+  </nav>
+
+  <!-- Main content -->
+  <div id="main">
+    <section id="product-display">
+      <div class="product-images">
+        <div id="previews">
+          <div class="product-preview" onmouseover="showImage('../../assets/images/vortex_front.png')">
+            <img src="../../assets/images/vortex_front.png">
+          </div>
+          <div class="product-preview" onmouseover="showImage('../../../assets/images/vortex_back.png')">
+            <img src="../../assets/images/vortex_back.png">
+          </div>
+          <div class="product-preview" onmouseover="showImage('../../assets/images/vortex_front_lower.png')">
+            <img src="../../assets/images/vortex_front_lower.png">
+          </div>
+          <div class="product-preview" onmouseover="showImage('../../assets/images/vortex_back_lower.png')">
+            <img src="../../assets/images/vortex_back_lower.png">
+          </div>
+        </div>
+        <div id="full-product">
+          <img id="main-img" src="../../../assets/images/utensils_pose_full.png">
+        </div>
+      </div>
+      <div class="product-description">
+        <h1>Glacial-Vortex</h1>
+        <p>
+          Upgrade your Cryo-Cutlery with the most extreme cooling system ever devised. The Glacial-Vortex uses a miniature black
+          hole to siphon away heat, ensuring impossibly cold dining. Ice cream stays frozen forever, soup may accidentally
+          solidify, and thermal physics no longer applies.
+          <br><br>
+          Warning: May cause spacetime anomalies and unexpected frost effects. Handle with care.
+        </p>
+        <div class="available">Available Soon</div>
+      </div>
+    </section>
+  </div>
+
+  <footer>
+    <h2>Credits</h2>
+    <p>
+      Created by Alex Wang. |
+      Models and renders created in <a class="link" href="https://blender.org/" target="_blank">Blender</a>. |
+      Logos created in <a class="link" href="https://inkscape.org/" target="_blank">InkScape</a>. |
+      Filler text provided by <a class="link" href="https://copilot.microsoft.com/" target="_blank">Microsoft
+        Copilot</a>
+    </p>
+  </footer>
+</body>
+
+</html>

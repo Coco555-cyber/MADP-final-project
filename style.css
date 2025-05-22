@@ -164,6 +164,7 @@ body {
 
 .dropdown-menu li:hover {
     color: black;
+    background: rgb(240, 240, 240);
 }
 
 .dropdown-menu li a {
@@ -465,17 +466,50 @@ body {
 
 #gradient-overlay {
     position: absolute;
-    width: 80%;
+    width: 100%;
     height: 80%;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
     content: "";
     opacity: 0.8;
-    filter: blur(10rem);
-    --angle: 0deg;
-    background: linear-gradient(var(--angle),#94D3F8FF, #F6D6FFFF);
+    background: linear-gradient(45deg, #94D3F8FF, #F6D6FFFF);
+    background-size: 200% 200%;
+    box-shadow: inset 0px 0px 10px rgba(0, 0, 0, 0.2);
+    animation: pulse 5s infinite alternate;
     z-index: -100;
+}
+
+#gradient-overlay::before,
+#gradient-overlay::after {
+    content: "";
+    position: absolute;
+    width: 20%;
+    height: 65%;
+    background: white;
+    z-index: -99;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+#gradient-overlay::before {
+    border-radius: 0 0 10rem 0;
+}
+
+
+#gradient-overlay::after {
+    right: 0;
+    bottom: 0;
+    border-radius: 10rem 0 0 0;
+}
+
+@keyframes pulse {
+    0% {
+        background-position: 0% 50%;
+    }
+
+    100% {
+        background-position: 100% 50%;
+    }
 }
 
 .test {
@@ -502,7 +536,8 @@ body {
     padding: 1rem;
     border-radius: 2rem;
     line-height: 2rem;
-    background: rgba(255, 255, 255, 0.4);
+    background: rgba(255, 255, 255, 0.5);
+    backdrop-filter: blur(1rem);
     box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.3);
 }
 
@@ -566,11 +601,11 @@ body {
 }
 
 .left-img {
-    border-radius: 0 2rem 2rem 0;
+    border-radius: 0 2rem 5vw 0;
 }
 
 .right-img {
-    border-radius: 2rem 0 0 2rem;
+    border-radius: 5vw 0 0 2rem;
 }
 
 footer {
@@ -580,7 +615,6 @@ footer {
 
 footer h2 {
     color: #00c3ff;
-    text-decoration: underline;
     font-weight: 300;
 }
 
@@ -592,11 +626,10 @@ footer p {
 
 .link {
     color: #00c3ff;
-    box-shadow: inset 0 0 0 0 #42a4b3;
     transition: all 0.2s ease-in-out;
+    text-decoration: none;
 }
-  
+
 .link:hover {
-    color: white;
-    box-shadow: inset 300px 0 0 0 #42a4b3;
+    filter: brightness(1.3);
 }
