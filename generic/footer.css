@@ -1,5 +1,5 @@
 footer {
-    background: black;
+    background: rgb(245, 245, 245);
     padding: 1rem 15vw;
 }
 
@@ -9,17 +9,16 @@ footer h2 {
 }
 
 footer p {
-    color: white;
     font-weight: 200;
     line-height: 2rem;
 }
 
 .link {
     color: #00c3ff;
-    transition: all 0.2s ease-in-out;
+    transition: all 0.1s ease-in-out;
     text-decoration: none;
 }
 
 .link:hover {
-    filter: brightness(1.3);
+    filter: brightness(1.2);
 }
