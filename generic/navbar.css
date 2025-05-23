@@ -92,8 +92,13 @@
 }
 
 #nav-links li a {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
     color: inherit;
     text-decoration: none;
+    gap: 5px;
 }
 
 .nav-obj:hover {
